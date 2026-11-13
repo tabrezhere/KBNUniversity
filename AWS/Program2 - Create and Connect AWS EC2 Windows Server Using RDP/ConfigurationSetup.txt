@@ -1,0 +1,21 @@
+#AWS Login for student/ Faculty 
+
+Step1: https://d-c3676e6fd8.awsapps.com/start/
+
+Step2:  Create the instance for windows server Image provide the name of instance 
+
+Step3:  Select Microsoft Windows server 2022 base, select MYIP and user/password
+
+Step4 Make the instance public accesible
+
+Step5:  Set Inbound rule  SSH to allow 22 portno
+In your AWS Console:
+
+Go to EC2 → Instances -> Select your running instance -> Click the Security tab -> Click the attached Security Group -> Select Inbound rules → Edit inbound rules
+
+Step6 : get the endpoint and port no 
+
+Step7 : Open Remote Desktop connection from your local machine 
+
+Note : Power shell commands to check SSH Connection
+Test-NetConnection yourIPAddress -Port 22
