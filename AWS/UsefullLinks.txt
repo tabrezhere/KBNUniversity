@@ -1,2 +1,6 @@
-Step 1 : https://d-c3676e6fd8.awsapps.com/start/
+#Git Hub Repo for AWS Lap programs 
+https://github.com/tabrezhere/KBNUniversity/tree/main/AWS
+
+#AWS Login for student/ Faculty 
+https://d-c3676e6fd8.awsapps.com/start/
 
