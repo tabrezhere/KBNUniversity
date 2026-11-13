@@ -4,7 +4,16 @@ Step2: Copy the downloaded .pem file in D:\KBNUniversity\Program1\student001.pem
 
 Step3:  Get the public IP address
 
-Step4:  open power shell with and execute below command
+Step4:  Set Inbound rule  SSH to allow 22 portno
+In your AWS Console:
+
+Go to EC2 → Instances -> Select your running instance -> Click the Security tab -> Click the attached Security Group -> Select Inbound rules → Edit inbound rules
+
+Add the following: 
+
+Add inbound rule : Type:SSH/Protocol:TCP/Port range :22/ source: My IP
+
+Step5:  open power shell with and execute below command
 # Disable inherited permissions
 icacls.exe ".\student001.pem" /inheritance:r
 
@@ -18,11 +27,17 @@ icacls.exe ".\student001.pem" /remove "Everyone"
 # Grant read permission to your Windows account
 icacls.exe ".\student001.pem" /grant:r "$($env:USERNAME):(R)"
 
-Step5: ssh -i "D:/KBNUniversity/Program1/student001.pem
+Step6: ssh -i "D:/KBNUniversity/Program1/student001.pem
 " ubuntu@yourIPAddress 
 
-Step6: Test the below command in linux 
+Step7: Test the below command in linux 
 whoami
 pwd
 mkdir program
 cd program
+
+
+
+Note : Power shell commands to check SSH Connection
+Test-NetConnection yourIPAddress -Port 22
+
