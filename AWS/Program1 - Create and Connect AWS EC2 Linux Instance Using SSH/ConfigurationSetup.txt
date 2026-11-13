@@ -1,0 +1,28 @@
+Step1:  Create the instance for Ubunto Image provide the name of instance 
+
+Step2: Copy the downloaded .pem file in D:\KBNUniversity\Program1\student001.pem
+
+Step3:  Get the public IP address
+
+Step4:  open power shell with and execute below command
+# Disable inherited permissions
+icacls.exe ".\student001.pem" /inheritance:r
+
+# Remove access for other users
+icacls.exe ".\student001.pem" /remove "NT AUTHORITY\Authenticated Users"
+
+icacls.exe ".\student001.pem" /remove "BUILTIN\Users"
+
+icacls.exe ".\student001.pem" /remove "Everyone"
+
+# Grant read permission to your Windows account
+icacls.exe ".\student001.pem" /grant:r "$($env:USERNAME):(R)"
+
+Step5: ssh -i "D:/KBNUniversity/Program1/student001.pem
+" ubuntu@yourIPAddress 
+
+Step6: Test the below command in linux 
+whoami
+pwd
+mkdir program
+cd program
