@@ -1,1 +1,0 @@
-Learn how to launch an Amazon EC2 Linux virtual machine on AWS, configure instance settings, generate and use SSH key pairs, and securely connect to the Linux instance using an SSH client such as Windows PowerShel
