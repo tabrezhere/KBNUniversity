@@ -1,0 +1,1 @@
+Learn how to launch an Amazon EC2 Windows Server instance on AWS, configure instance settings, retrieve administrator credentials, and securely connect to the Windows virtual machine using Remote Desktop Protocol (RDP)
